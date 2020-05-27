@@ -1,0 +1,32 @@
+swagger: '2.0'
+info:
+    title: Espv2_endpoint
+    description: Espv2_endpoint
+    version: 1.0.0
+host: espv2-img-test-do62tzdoqq-ew.a.run.app
+schemes:
+    - https
+produces:
+   - application/json
+paths:
+    /getDummyData:
+      get:
+        summary: Gets dummy data from Dummy_Db
+        operationId: getDummyData
+        x-google-backend:
+          address: https://us-central1-sep6s20.cloudfunctions.net/getDummyData
+          protocol: h2
+        responses:
+          '200':
+            description: A successful response
+            schema:
+              type: string
+        security:
+        - api_key: [] 
+
+securityDefinitions:
+  # This section configures basic authentication with an API key.
+    api_key:
+      type: "apiKey"
+      name: "sep6-ng-app-API-key"
+      in: "query"
