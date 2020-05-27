@@ -1,6 +1,9 @@
 steps:
     - name: 'gcr.io/cloud-builders/gcloud'
-      args: ['run', 'deploy', 'espv2-img-test', '--image', 'gcr.io/sep6s20/endpoints-runtime-serverless:espv2-img-test-do62tzdoqq-ew.a.run.app-2020-05-27r0', '--region', 'europe-west1', '--platform', 'managed', '--allow-unauthenticated']
+      args: ['run', 'deploy', 'espv2-img-test', '--image', 'gcr.io/sep6s20/endpoints-runtime-serverless@sha256:cf20cc450fb2b593642b99d57103a2d4d3b4ed691d4e4513c58c2b6e856ddcd2', '--region', 'europe-west1', '--platform', 'managed', '--allow-unauthenticated']
 
 images:
-    - 'gcr.io/sep6s20/endpoints-runtime-serverless:espv2-img-test-do62tzdoqq-ew.a.run.app-2020-05-27r0'
+    - 'gcr.io/sep6s20/endpoints-runtime-serverless@sha256:cf20cc450fb2b593642b99d57103a2d4d3b4ed691d4e4513c58c2b6e856ddcd2'
+
+
+    
